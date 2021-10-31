@@ -1,0 +1,26 @@
+// Print bookid, book-title, book-price using Struct with Function.
+#include<iostream>
+using namespace std;
+
+struct book {
+    int bookid;
+    char title[20];
+    float price;
+};
+book input()    {
+    book b2;
+    cout << "\nEnter book id: ";  cin >> b2.bookid;
+    cout << "Enter book name: ";    cin >> b2.title;
+    cout << "Enter book price: ";   cin >> b2.price;
+    return(b2);
+}
+void display(book b3)   {
+    cout << "\nbook id: " << b3.bookid << endl;  
+    cout << "book name: " << b3.title << endl;
+    cout << "book price: " << b3.price << endl;
+}
+int main()  {
+    struct book b1;
+    b1 = input();
+    display(b1);
+}
